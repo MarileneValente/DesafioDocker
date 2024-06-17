@@ -1,0 +1,16 @@
+version: 
+services:
+  web:
+
+    ports:
+      - "8000:5000"
+  redis:
+    image: 
+    ports:
+      - '6379:6379'
+
+    volumes: 
+      - ./cache:/data
+volumes:
+  cache:
+    driver: local
